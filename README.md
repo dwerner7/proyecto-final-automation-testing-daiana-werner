@@ -31,12 +31,12 @@ En consola:
 
 ## Ejecución de pruebas 🌟
 Para ejecutar las pruebas se debe abrir la consola, ubicarse sobre el proyecto a testear y con el comando:
-    - py -m pytest run_tests.py -v
+-       py -m pytest run_tests.py -v
 
 (Ejecutando este archivo se correrán todos los tests del proyecto y se creará un reporte HTML.)
 
 
 En caso de querer ejecutar los tests individualmente se debe usar el siguiente comando (ejemplo con test_login):
-    - py -m pytest test/test_login.py 
+-        py -m pytest test/test_login.py 
 - Si se quiere obtener más detalles de la ejecución agregar al final del comando: -v
 - Si se quiere un reporte HTML agregar al final del comando: --html=reporte.html
