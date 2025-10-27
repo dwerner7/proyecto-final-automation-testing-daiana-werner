@@ -23,10 +23,17 @@ El propósito de este proyecto es:
 
 ## Instalación de dependencias 🌟
 En consola:
-- **Pytest**: pip install pytest
-- **Selenium**: pip install selenium
-- **WebDriver**: pip install webdriver-manager
-- **Reporte HTML**: pip install pytest-html
+- **Pytest**: 
+-       pip install pytest
+
+- **Selenium**: 
+-       pip install selenium
+
+- **WebDriver**: 
+-       pip install webdriver-manager
+
+- **Reporte HTML**: 
+-       pip install pytest-html
 
 
 ## Ejecución de pruebas 🌟
