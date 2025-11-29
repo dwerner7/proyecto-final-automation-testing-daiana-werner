@@ -21,10 +21,7 @@ El propósito de este proyecto es:
 - **Git & GitHub**: Sistema de control de versiones y hosting del código fuente.
 - **Peticiones API**: Para realizar pruebas sobre las APIs del sistema y garantizar su correcto funcionamiento.
 - **Page Object Model (POM)**: Un patrón de diseño que facilita la organización y mantenimiento de las pruebas al abstraer la lógica de interacción con la interfaz de usuario.
-- **Sistema de Logging**: Para registrar eventos y errores durante la ejecución de las pruebas, lo que ayuda en la depuración y el seguimiento del flujo de ejecución. Los logs se almacenan en la carpeta logs y pueden incluir:
-    - Mensajes de inicio y finalización de pruebas.
-    - Errores encontrados durante la ejecución.
-    - Información sobre las interacciones con la interfaz de usuario y las APIs.
+- **Sistema de Logging**: Para registrar eventos y errores durante la ejecución de las pruebas, lo que ayuda en la depuración y el seguimiento del flujo de ejecución.
 - **Faker**: Biblioteca para generar datos de prueba falsos, en este caso usuarios y contraseñas, lo que permite simular interacciones más realistas en las pruebas.
 
 
