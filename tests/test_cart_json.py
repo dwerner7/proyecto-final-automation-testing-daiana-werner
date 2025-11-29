@@ -43,3 +43,5 @@ def test_cart_json(login_in_driver,usuario,password,nombre_producto):
         raise
     finally:
         driver.quit()
+
+    logger.info("_______________________________________________________________________________")

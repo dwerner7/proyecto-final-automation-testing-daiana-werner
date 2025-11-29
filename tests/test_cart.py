@@ -25,7 +25,7 @@ def test_cart(login_in_driver,usuario,password):
         # Validar que haya un producto en el carrito
         cart_page = CartPage(driver)
 
-        productos_en_carrito = cart_page.obtener_nombre_producto_carrito()
+        productos_en_carrito = cart_page.obtener_productos_carrito()
         logger.info(f"Cantidad de productos en el carrito: {len(productos_en_carrito)}")
         assert len(productos_en_carrito) == 1
 
@@ -37,3 +37,5 @@ def test_cart(login_in_driver,usuario,password):
         raise
     finally:
         driver.quit()
+
+    logger.info("_______________________________________________________________________________")

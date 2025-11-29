@@ -31,4 +31,6 @@ def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
         logger.info(f"Error en test de login - {mensaje_error}")
         assert "Epic sadface" in mensaje_error, "el mensaje de error no se esta mostrando"
 
+    logger.info("_______________________________________________________________________________")
+
 

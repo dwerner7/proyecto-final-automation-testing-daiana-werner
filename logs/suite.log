@@ -1,68 +1,46 @@
-2025-11-29 17:37:14 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:37:14 INFO TalentoTech: Error en test de inventario - visibility_of_all_elements_located() takes 1 positional argument but 2 were given
-2025-11-29 17:37:54 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:37:54 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
-2025-11-29 17:38:04 INFO TalentoTech: Cantidad de productos en el carrito: 0
-2025-11-29 17:38:15 INFO TalentoTech: 1 producto agregado al carrito
-2025-11-29 17:38:15 INFO TalentoTech: Cantidad actualizada de productos en el carrito: 0
-2025-11-29 17:38:15 INFO TalentoTech: Error en test de inventario - assert 0 == 1
- +  where 0 = obtener_conteo_carrito()
- +    where obtener_conteo_carrito = <pages.inventory_page.InventoryPage object at 0x00000201B1591550>.obtener_conteo_carrito
-2025-11-29 17:39:33 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:39:33 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
-2025-11-29 17:39:43 INFO TalentoTech: Cantidad de productos en el carrito: 0
-2025-11-29 17:39:53 INFO TalentoTech: Error en test de inventario - visibility_of_all_elements_located() takes 1 positional argument but 2 were given
-2025-11-29 17:42:42 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:42:42 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
-2025-11-29 17:42:52 INFO TalentoTech: Cantidad de productos en el carrito: 0
-2025-11-29 17:43:02 INFO TalentoTech: 1 producto agregado al carrito
-2025-11-29 17:43:02 INFO TalentoTech: Cantidad actualizada de productos en el carrito: 0
-2025-11-29 17:43:02 INFO TalentoTech: Error en test de inventario - assert 0 == 1
- +  where 0 = obtener_conteo_carrito()
- +    where obtener_conteo_carrito = <pages.inventory_page.InventoryPage object at 0x00000273B57716A0>.obtener_conteo_carrito
-2025-11-29 17:44:53 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:44:53 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
-2025-11-29 17:45:03 INFO TalentoTech: Cantidad de productos en el carrito: 0
-2025-11-29 17:45:14 INFO TalentoTech: [<selenium.webdriver.remote.webelement.WebElement (session="242a9f694da7170704209da1e24a3629", element="f.0BB3567BA60366EC7F0EEBC9E11B91DB.d.81029001FCA2DC0B6AD8D45596ABF461.e.21")>, <selenium.webdriver.remote.webelement.WebElement (session="242a9f694da7170704209da1e24a3629", element="f.0BB3567BA60366EC7F0EEBC9E11B91DB.d.81029001FCA2DC0B6AD8D45596ABF461.e.22")>, <selenium.webdriver.remote.webelement.WebElement (session="242a9f694da7170704209da1e24a3629", element="f.0BB3567BA60366EC7F0EEBC9E11B91DB.d.81029001FCA2DC0B6AD8D45596ABF461.e.23")>, <selenium.webdriver.remote.webelement.WebElement (session="242a9f694da7170704209da1e24a3629", element="f.0BB3567BA60366EC7F0EEBC9E11B91DB.d.81029001FCA2DC0B6AD8D45596ABF461.e.24")>, <selenium.webdriver.remote.webelement.WebElement (session="242a9f694da7170704209da1e24a3629", element="f.0BB3567BA60366EC7F0EEBC9E11B91DB.d.81029001FCA2DC0B6AD8D45596ABF461.e.25")>, <selenium.webdriver.remote.webelement.WebElement (session="242a9f694da7170704209da1e24a3629", element="f.0BB3567BA60366EC7F0EEBC9E11B91DB.d.81029001FCA2DC0B6AD8D45596ABF461.e.26")>]
-2025-11-29 17:45:14 INFO TalentoTech: 1 producto agregado al carrito
-2025-11-29 17:45:14 INFO TalentoTech: Cantidad actualizada de productos en el carrito: 0
-2025-11-29 17:45:14 INFO TalentoTech: Error en test de inventario - assert 0 == 1
- +  where 0 = obtener_conteo_carrito()
- +    where obtener_conteo_carrito = <pages.inventory_page.InventoryPage object at 0x0000021FD4C95550>.obtener_conteo_carrito
-2025-11-29 17:46:45 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:46:45 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
-2025-11-29 17:46:56 INFO TalentoTech: Cantidad de productos en el carrito: 0
-2025-11-29 17:47:06 INFO TalentoTech: <selenium.webdriver.remote.webelement.WebElement (session="5e035717f23f04f57f3d2ce4dd410d23", element="f.22EE6E747F72CB7181E1402D34DE7579.d.ADD13A61C5328FDE8CA196ED792C6F20.e.27")>
-2025-11-29 17:47:06 INFO TalentoTech: 1 producto agregado al carrito
-2025-11-29 17:47:06 INFO TalentoTech: Cantidad actualizada de productos en el carrito: 0
-2025-11-29 17:47:06 INFO TalentoTech: Error en test de inventario - assert 0 == 1
- +  where 0 = obtener_conteo_carrito()
- +    where obtener_conteo_carrito = <pages.inventory_page.InventoryPage object at 0x000001A0E3D55550>.obtener_conteo_carrito
-2025-11-29 17:48:25 INFO TalentoTech: Iniciando test de inventario...
-2025-11-29 17:48:25 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
-2025-11-29 17:48:35 INFO TalentoTech: Cantidad de productos en el carrito: 0
-2025-11-29 17:48:45 INFO TalentoTech: Error en test de inventario - Message: invalid argument: 'using' must be a string
-  (Session info: chrome=142.0.7444.176)
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff7446ca235
-	0x7ff744422630
-	0x7ff7441b16dd
-	0x7ff74420a03e
-	0x7ff74420a58c
-	0x7ff7441fcd7c
-	0x7ff7441fcc36
-	0x7ff74425baba
-	0x7ff7441fb0ed
-	0x7ff7441fbf63
-	0x7ff7446f5d60
-	0x7ff7446efe8a
-	0x7ff744711005
-	0x7ff74443d71e
-	0x7ff744444e1f
-	0x7ff74442b7c4
-	0x7ff74442b97f
-	0x7ff7444118e8
-	0x7ffe42b37374
-	0x7ffe4467cc91
-
+2025-11-29 19:39:20 INFO TalentoTech: Realizando la solicitud GET a https://reqres.in/api/users del usuario con id 2
+2025-11-29 19:39:24 INFO TalentoTech: Status code: 200
+2025-11-29 19:39:24 INFO TalentoTech: ID del usuario obtenido: 2
+2025-11-29 19:39:24 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:39:24 INFO TalentoTech: Realizando la solicitud POST a https://reqres.in/api/users de un nuevo usuario: Jose - Profesor
+2025-11-29 19:39:32 INFO TalentoTech: Status code: 201
+2025-11-29 19:39:32 INFO TalentoTech: Nombre del usuario creado: Jose
+2025-11-29 19:39:32 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:39:32 INFO TalentoTech: Realizando la solicitud DELETE a https://reqres.in/api/users del usuario con id 2
+2025-11-29 19:39:54 INFO TalentoTech: Status code: 204
+2025-11-29 19:39:54 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:40:10 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-11-29 19:40:10 INFO TalentoTech: Completando con los datos de usuario: 'standard_user - secret_sauce'
+2025-11-29 19:40:10 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-11-29 19:40:10 INFO TalentoTech: Test de login de usuario standard_user exitoso
+2025-11-29 19:40:10 INFO TalentoTech: Test de login completado
+2025-11-29 19:40:10 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:40:18 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-11-29 19:40:18 INFO TalentoTech: Completando con los datos de usuario: 'locked_out_user - secret_sauce'
+2025-11-29 19:40:18 INFO TalentoTech: Error en test de login - Epic sadface: Sorry, this user has been locked out.
+2025-11-29 19:40:18 INFO TalentoTech: Test de login completado
+2025-11-29 19:40:18 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:40:25 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-11-29 19:40:25 INFO TalentoTech: Completando con los datos de usuario: 'problem_user - secret_sauce'
+2025-11-29 19:40:25 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-11-29 19:40:25 INFO TalentoTech: Test de login de usuario problem_user exitoso
+2025-11-29 19:40:25 INFO TalentoTech: Test de login completado
+2025-11-29 19:40:25 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:40:38 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-11-29 19:40:38 INFO TalentoTech: Completando con los datos de usuario: 'performance_glitch_user - secret_sauce'
+2025-11-29 19:40:38 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-11-29 19:40:38 INFO TalentoTech: Test de login de usuario performance_glitch_user exitoso
+2025-11-29 19:40:38 INFO TalentoTech: Test de login completado
+2025-11-29 19:40:38 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:40:46 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-11-29 19:40:46 INFO TalentoTech: Completando con los datos de usuario: 'error_user - secret_sauce'
+2025-11-29 19:40:46 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-11-29 19:40:46 INFO TalentoTech: Test de login de usuario error_user exitoso
+2025-11-29 19:40:46 INFO TalentoTech: Test de login completado
+2025-11-29 19:40:46 INFO TalentoTech: _______________________________________________________________________________
+2025-11-29 19:40:54 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-11-29 19:40:54 INFO TalentoTech: Completando con los datos de usuario: 'visual_user - secret_sauce'
+2025-11-29 19:40:54 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-11-29 19:40:54 INFO TalentoTech: Test de login de usuario visual_user exitoso
+2025-11-29 19:40:54 INFO TalentoTech: Test de login completado
+2025-11-29 19:40:54 INFO TalentoTech: _______________________________________________________________________________

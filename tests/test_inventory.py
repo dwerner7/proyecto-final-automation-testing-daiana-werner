@@ -37,3 +37,5 @@ def test_inventory(login_in_driver,usuario,password):
         raise
     finally:
         driver.quit()
+    
+    logger.info("_______________________________________________________________________________")

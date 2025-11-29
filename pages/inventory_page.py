@@ -31,33 +31,32 @@ class InventoryPage:
     # Recorre la lista de nombres (productos) y en cada iteracion guardamos el nombre convertido en texto
 
     def agregar_primer_producto(self):
-        # productos = self.wait.until(EC.visibility_of_all_elements_located(*self._INVENTORY_ITEMS))
-        productos = self.obtener_todos_los_productos()
-                    
+        productos = self.wait.until(EC.visibility_of_all_elements_located(self._INVENTORY_ITEMS)) 
+
         primer_boton_producto = productos[0].find_element(*self._ADD_TO_CART_BUTTON)
         primer_boton_producto.click()
 
     def agregar_producto_por_nombre(self,nombre_producto):
-        # productos = self.obtener_todos_los_productos()
-
-        productos = self.driver.find_elements(*self._INVENTORY_ITEMS)
+        productos = self.driver.find_elements(*self._INVENTORY_ITEMS)   
 
         for producto in productos:
             nombre = producto.find_element(*self._ITEM_NAME).text
 
-            if nombre.strip() == nombre_producto.strip(): # .lower() ???
-                boton = producto.find_element(self._ADD_TO_CART_BUTTON)
+            if nombre.strip() == nombre_producto.strip():
+                boton = producto.find_element(*self._ADD_TO_CART_BUTTON)
                 boton.click()
-            else:
-                raise Exception(f"No se encontro el producto {nombre_producto}")
+                return self
+        
+        raise Exception(f"No se encontro el producto {nombre_producto}")
 
     def abrir_carrito(self):
         self.wait.until(EC.element_to_be_clickable(self._CART_LINK)).click()
+        return self
 
     def obtener_conteo_carrito(self):
         try:
-            self.wait.until(EC.visibility_of_element_located(self._CART_COUNT))
-            contador_carrito = self.driver.find_element(self._CART_COUNT)
+            self.wait.until(EC.visibility_of_element_located(self._CART_COUNT)) 
+            contador_carrito = self.driver.find_element(*self._CART_COUNT)
             return int(contador_carrito.text)
         except:
             return 0

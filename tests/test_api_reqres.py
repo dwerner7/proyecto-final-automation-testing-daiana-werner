@@ -19,6 +19,8 @@ def test_get_user(id_usuario):
     logger.info(f"ID del usuario obtenido: {data["data"]["id"]}")
     assert data["data"]["id"] == id_usuario
 
+    logger.info("_______________________________________________________________________________")
+
 
 # Crear usuario
 @pytest.mark.parametrize("payload",[{
@@ -39,6 +41,8 @@ def test_create_user(payload):
     logger.info(f"Nombre del usuario creado: {data["name"]}")
     assert data["name"] == payload["name"]
 
+    logger.info("_______________________________________________________________________________")
+
 
 # Eliminar usuario
 @pytest.mark.parametrize("id_usuario",["2"])
@@ -51,6 +55,7 @@ def test_delete_user(id_usuario):
     logger.info(f"Status code: {response.status_code}")
     assert response.status_code == 204, f"Error al eliminar al usuario con id {id_usuario}"
 
+    logger.info("_______________________________________________________________________________")
 
 # Completo ---------------------------------------------------------------
 # Lo comento porque la API no encuentra al usuario que creé buscándolo con su id, trae a otro usuario por lo que los tests fallan
