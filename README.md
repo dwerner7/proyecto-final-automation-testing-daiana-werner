@@ -1,7 +1,7 @@
 # Proyecto de Pruebas Automatizadas con Pytest y Selenium WebDriver 
 
 ## Descripción 🌟
-Este proyecto tiene como objetivo implementar pruebas automatizadas para una página web ("https://www.saucedemo.com/") utilizando **Pytest** y **Selenium + Selenium WebDriver**. Las pruebas automatizadas son esenciales para garantizar la calidad y el funcionamiento adecuado de la aplicación web, permitiendo detectar errores y problemas de rendimiento de manera temprana en el ciclo de desarrollo.
+Este proyecto tiene como objetivo implementar pruebas automatizadas para una página web ("https://www.saucedemo.com/") utilizando **Pytest**, **Selenium + Selenium WebDriver**, implementando **Page Object Model** para cada test y realizando pruebas en **API** (Requests). Las pruebas automatizadas son esenciales para garantizar la calidad y el funcionamiento adecuado de la aplicación web, permitiendo detectar errores y problemas de rendimiento de manera temprana en el ciclo de desarrollo.
 
 
 ## Propósito 🌟
@@ -19,6 +19,13 @@ El propósito de este proyecto es:
 - **Selenium + Selenium WebDriver**: Herramienta que permite controlar un navegador web de forma programática, facilitando la interacción con la interfaz de usuario.
 - **WebDriver Manager**: Gestión automática de los drivers del navegador (ej. ChromeDriver).
 - **Git & GitHub**: Sistema de control de versiones y hosting del código fuente.
+- **Peticiones API**: Para realizar pruebas sobre las APIs del sistema y garantizar su correcto funcionamiento.
+- **Page Object Model (POM)**: Un patrón de diseño que facilita la organización y mantenimiento de las pruebas al abstraer la lógica de interacción con la interfaz de usuario.
+- **Sistema de Logging**: Para registrar eventos y errores durante la ejecución de las pruebas, lo que ayuda en la depuración y el seguimiento del flujo de ejecución. Los logs se almacenan en la carpeta logs y pueden incluir:
+    - Mensajes de inicio y finalización de pruebas.
+    - Errores encontrados durante la ejecución.
+    - Información sobre las interacciones con la interfaz de usuario y las APIs.
+- **Faker**: Biblioteca para generar datos de prueba falsos, en este caso usuarios y contraseñas, lo que permite simular interacciones más realistas en las pruebas.
 
 
 ## Instalación de dependencias 🌟
@@ -35,6 +42,9 @@ En consola:
 - **Reporte HTML**: 
 -       pip install pytest-html
 
+- **Faker**: 
+-       pip install faker
+
 
 ## Ejecución de pruebas 🌟
 Para ejecutar las pruebas se debe abrir la consola, ubicarse sobre el proyecto a testear y con el comando:
@@ -45,5 +55,20 @@ Para ejecutar las pruebas se debe abrir la consola, ubicarse sobre el proyecto a
 
 En caso de querer ejecutar los tests individualmente se debe usar el siguiente comando (ejemplo con test_login):
 -        py -m pytest test/test_login.py 
-- Si se quiere obtener más detalles de la ejecución agregar al final del comando: -v
-- Si se quiere un reporte HTML agregar al final del comando: --html=reporte.html
+- Si se quiere obtener más detalles de la ejecución, agregar al final del comando: -v
+- Si se quiere un reporte HTML, agregar al final del comando: --html=reporte.html
+
+
+## Interpretación de reportes generados 🌟
+- **Reporte HTML**: Los reportes generados son archivos HTML que contienen:
+    - Un resumen de las pruebas realizadas.
+    - Información sobre las pruebas que pasaron y fallaron.
+    - Detalles sobre los errores encontrados, incluyendo mensajes de error.
+Para poder visualizarlo, se debe abrir el archivo **report.html** en cualquier navegador para visualizar los resultados de las pruebas de manera clara y estructurada.
+
+- **Logging**: El sistema de logging está implementado para registrar información relevante durante la ejecución de las pruebas. Los logs se almacenan en la carpeta **logs** y pueden incluir:
+    - Mensajes de inicio y finalización de pruebas.
+    - Errores encontrados durante la ejecución.
+    - Información sobre las interacciones con la interfaz de usuario y las APIs.
+Con este archivos se va a obtener información adicional sobre la ejecución de las pruebas y a facilitar la depuración en caso de fallos.
+

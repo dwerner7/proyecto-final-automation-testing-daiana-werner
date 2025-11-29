@@ -1,28 +1,39 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
+from selenium import webdriver
+import pytest
 
-def test_cart(login_in_driver, obtener_primer_producto, agregar_un_producto_al_carrito, obtener_producto_del_carrito):
+from pages.inventory_page import InventoryPage
+from pages.cart_page import CartPage
+from utils.logger import logger
+
+@pytest.mark.parametrize("usuario,password",[("standard_user","secret_sauce")])
+def test_cart(login_in_driver,usuario,password):
+    logger.info("Iniciando test de carrito...")
     try:
-        driver = login_in_driver
         
-        primer_producto = obtener_primer_producto
-       
-        time.sleep(5)
+        driver = login_in_driver
+        inventory_page = InventoryPage(driver)
 
-       # Verificar que el contador del carrito este en 1 al agregar un producto
-        assert agregar_un_producto_al_carrito, "El contador del carrito es incorrecto (se esperaba 1)"
+        # Agregar el producto al carrito 
+        inventory_page.agregar_primer_producto()
 
-        time.sleep(2)
+        logger.info("Agregando 1 producto al carrito")
 
-        # Validar que el producto añadido aparezca correctamente en el carrito
-        assert obtener_producto_del_carrito["nombre"] == primer_producto["nombre"], "El producto del carrito no coincide"
+        # Abrir el carrito
+        inventory_page.abrir_carrito()
 
-        # time.sleep(2)
+        # Validar que haya un producto en el carrito
+        cart_page = CartPage(driver)
+
+        productos_en_carrito = cart_page.obtener_nombre_producto_carrito()
+        logger.info(f"Cantidad de productos en el carrito: {len(productos_en_carrito)}")
+        assert len(productos_en_carrito) == 1
+
+        logger.info("Test de carrito completo")
 
     except Exception as e:
         print(f"Error en test_cart: {e}")
-        raise 
-
+        logger.info(f"Error en test de carrito --> {e}")
+        raise
     finally:
         driver.quit()

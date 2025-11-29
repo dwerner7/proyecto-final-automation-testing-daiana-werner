@@ -1,33 +1,38 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
+from selenium import webdriver
+import pytest
+from pages.inventory_page import InventoryPage
+from utils.logger import logger
 
-def test_inventory(login_in_driver, hay_productos_visibles, hay_menu, hay_filtros, obtener_primer_producto):
+@pytest.mark.parametrize("usuario,password",[("standard_user","secret_sauce")])
+def test_inventory(login_in_driver,usuario,password):
+    logger.info("Iniciando test de inventario...")
     try:
+
         driver = login_in_driver
+        inventory_page = InventoryPage(driver)
 
-        # Verificamos que el titulo de la pagina sea correcto
-        assert driver.title == "Swag Labs", "El titulo de la pagina no es correcto"
+        # Verificar que hay productos
+        logger.info(f"Cantidad de productos presentes en el inventario: {len(inventory_page.obtener_todos_los_productos())}")
+        assert len(inventory_page.obtener_todos_los_productos()) > 0, "El inventario esta vacio"
 
-        # Capturamos todos los productos de la pagina y validamos que la lista no este vacia
-        assert hay_productos_visibles, "No hay productos visibles en el inventario"
+        # Verificar que el carrito se encuentre vacio al inicio
+        logger.info(f"Cantidad de productos en el carrito: {inventory_page.obtener_conteo_carrito()}")
+        assert inventory_page.obtener_conteo_carrito() == 0
 
-        # time.sleep(2)
+        # Agregar el primer producto al carrito
+        inventory_page.agregar_primer_producto()
+        logger.info("1 producto agregado al carrito")
 
-        # Validar elementos importantes de la interfaz (menu y filtros)
-        assert hay_menu, "No hay un menu en la pagina"
-        assert hay_filtros, "No hay filtros de busqueda en la pagina"
+        # Verificar el contador del carrito
+        logger.info(f"Cantidad actualizada de productos en el carrito: {inventory_page.obtener_conteo_carrito()}")
+        assert inventory_page.obtener_conteo_carrito() == 1
 
-        # Validar nombre y precio del primer producto
-        primer_producto = obtener_primer_producto
-        print(f"Primer producto → {primer_producto["nombre"]} - {primer_producto["precio"]}")
-
-        time.sleep(2)
+        logger.info("Test de inventario completo")
 
     except Exception as e:
         print(f"Error en test_inventory: {e}")
-        raise 
-
+        logger.info(f"Error en test de inventario - {e}")
+        raise
     finally:
         driver.quit()
-
