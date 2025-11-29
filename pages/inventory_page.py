@@ -3,6 +3,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utils.logger import logger
+
 class InventoryPage:
     # Selectores
     _INVENTORY_ITEMS = (By.CLASS_NAME, "inventory_item")
@@ -18,7 +20,7 @@ class InventoryPage:
 
     def obtener_todos_los_productos(self):
         # Espera a que todos los elementos esten presentes
-        self.wait.until(EC.visibility_of_all_elements_located(*self._INVENTORY_ITEMS))
+        self.wait.until(EC.visibility_of_all_elements_located(self._INVENTORY_ITEMS))
         # Toma los elementos y arma una lista con ellos (*)
         productos = self.driver.find_elements(*self._INVENTORY_ITEMS)
         return productos
@@ -29,15 +31,16 @@ class InventoryPage:
     # Recorre la lista de nombres (productos) y en cada iteracion guardamos el nombre convertido en texto
 
     def agregar_primer_producto(self):
-        productos = self.wait.until(EC.visibility_of_all_elements_located(*self._INVENTORY_ITEMS))
-        
+        # productos = self.wait.until(EC.visibility_of_all_elements_located(*self._INVENTORY_ITEMS))
+        productos = self.obtener_todos_los_productos()
+                    
         primer_boton_producto = productos[0].find_element(*self._ADD_TO_CART_BUTTON)
         primer_boton_producto.click()
 
     def agregar_producto_por_nombre(self,nombre_producto):
-        productos = self.obtener_todos_los_productos()
+        # productos = self.obtener_todos_los_productos()
 
-        # productos = self.driver.find_elements(*self._INVENTORY_ITEMS)
+        productos = self.driver.find_elements(*self._INVENTORY_ITEMS)
 
         for producto in productos:
             nombre = producto.find_element(*self._ITEM_NAME).text

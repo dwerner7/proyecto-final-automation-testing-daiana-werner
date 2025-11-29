@@ -13,8 +13,9 @@ def test_inventory(login_in_driver,usuario,password):
         inventory_page = InventoryPage(driver)
 
         # Verificar que hay productos
-        logger.info(f"Cantidad de productos presentes en el inventario: {len(inventory_page.obtener_todos_los_productos())}")
-        assert len(inventory_page.obtener_todos_los_productos()) > 0, "El inventario esta vacio"
+        productos = inventory_page.obtener_todos_los_productos()
+        logger.info(f"Cantidad de productos presentes en el inventario: {len(productos)}")
+        assert len(productos) > 0, "El inventario esta vacio"
 
         # Verificar que el carrito se encuentre vacio al inicio
         logger.info(f"Cantidad de productos en el carrito: {inventory_page.obtener_conteo_carrito()}")
