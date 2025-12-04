@@ -13,6 +13,7 @@ def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
     logger.info(f"Completando con los datos de usuario: '{usuario} - {password}'")
 
     driver = login_in_driver
+    LoginPage(driver).login_completo(usuario,password)
 
     if debe_funcionar:
         logger.info("Verificando redireccionamiento dentro de la pagina")

@@ -1,6 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 import pytest
+
+from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from utils.logger import logger
 
@@ -10,6 +12,8 @@ def test_inventory(login_in_driver,usuario,password):
     try:
 
         driver = login_in_driver
+        LoginPage(driver).login_completo(usuario,password)
+
         inventory_page = InventoryPage(driver)
 
         # Verificar que hay productos
@@ -35,7 +39,5 @@ def test_inventory(login_in_driver,usuario,password):
         print(f"Error en test_inventory: {e}")
         logger.info(f"Error en test de inventario - {e}")
         raise
-    finally:
-        driver.quit()
     
     logger.info("_______________________________________________________________________________")

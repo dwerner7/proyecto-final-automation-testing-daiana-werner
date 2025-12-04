@@ -7,7 +7,7 @@ test_files = [
     "tests/test_inventory.py",
     "tests/test_cart.py",
     "tests/test_cart_json.py",
-    "tests/test_api_reqres.py"
+    "tests/test_api.py"
 ]
 
 # pytest argumentos para ejecutar las pruebas: archivos + reporte HTML

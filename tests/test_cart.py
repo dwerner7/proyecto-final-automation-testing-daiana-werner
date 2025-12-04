@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import pytest
 
+from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 from utils.logger import logger
@@ -12,6 +13,8 @@ def test_cart(login_in_driver,usuario,password):
     try:
         
         driver = login_in_driver
+        LoginPage(driver).login_completo(usuario,password)
+
         inventory_page = InventoryPage(driver)
 
         # Agregar el producto al carrito 
@@ -35,7 +38,5 @@ def test_cart(login_in_driver,usuario,password):
         print(f"Error en test_cart: {e}")
         logger.info(f"Error en test de carrito --> {e}")
         raise
-    finally:
-        driver.quit()
 
     logger.info("_______________________________________________________________________________")

@@ -3,6 +3,7 @@ from selenium import webdriver
 import pytest
 import time
 
+from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 from utils.lector_json import leer_json_productos
@@ -18,6 +19,8 @@ def test_cart_json(login_in_driver,usuario,password,nombre_producto):
         logger.info(f"Producto: {nombre_producto}")
 
         driver = login_in_driver
+        LoginPage(driver).login_completo(usuario,password)
+
         inventory_page = InventoryPage(driver)
 
         # Agregar al carrito el producto
@@ -41,7 +44,5 @@ def test_cart_json(login_in_driver,usuario,password,nombre_producto):
     except Exception as e:
         print(f"Error en test_cart: {e}")
         raise
-    finally:
-        driver.quit()
 
     logger.info("_______________________________________________________________________________")

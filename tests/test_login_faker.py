@@ -14,11 +14,13 @@ fake = Faker()
     (fake.user_name(), fake.password(length=8,special_chars=True,upper_case=True,lower_case=True,digits=True), False),
     (fake.user_name(), fake.password(), False)
 ])
-def test_login_validation(login_in_driver,usuario,password,debe_funcionar):
+def test_login_validation_faker(login_in_driver,usuario,password,debe_funcionar):
     logger.info("Iniciando test login con faker utilizando credenciales inválidas...")
     logger.info(f"Completando con los datos de usuario: '{usuario} - {password}'")
 
     driver = login_in_driver
+    LoginPage(driver).login_completo(usuario,password)
+    
     if debe_funcionar:
         logger.info("Verificando redireccionamiento dentro de la pagina")
         

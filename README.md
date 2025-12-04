@@ -1,71 +1,75 @@
 # Proyecto de Pruebas Automatizadas con Pytest y Selenium WebDriver 
 
-## Descripción 🌟
-Este proyecto tiene como objetivo implementar pruebas automatizadas para una página web ("https://www.saucedemo.com/") utilizando **Pytest**, **Selenium + Selenium WebDriver**, implementando **Page Object Model** para cada test y realizando pruebas en **API** (Requests). Las pruebas automatizadas son esenciales para garantizar la calidad y el funcionamiento adecuado de la aplicación web, permitiendo detectar errores y problemas de rendimiento de manera temprana en el ciclo de desarrollo.
-
-
 ## Propósito 🌟
-El propósito de este proyecto es:
-- **Automatizar pruebas funcionales**: Verificar que las funcionalidades de la página web se comporten como se espera.
-- **Aumentar la eficiencia**: Reducir el tiempo y esfuerzo requerido para realizar pruebas manuales.
-- **Facilitar la integración continua**: Permitir la ejecución de pruebas de manera automática en cada cambio de código.
-- **Mejorar la calidad del software**: Identificar y corregir errores antes de que lleguen a producción.
+Este proyecto tiene como objetivo implementar pruebas automatizadas para la página web "https://www.saucedemo.com/" implementando **Page Object Model**, manejo de datos externos, generación de reportes HTML, logging y capturas automática de pantalla, y realizando pruebas en **API** sobre "https://jsonplaceholder.typicode.com/" utilizando **Requests**. 
 
 
 ## Tecnologías Utilizadas 🌟
-- **Python**: Lenguaje de programación utilizado para escribir las pruebas.
-- **Pytest**: Framework de testing que permite estructurar y ejecutar las pruebas de manera sencilla.
-- **Pytest-HTML**: Generación de reportes detallados en formato HTML.
-- **Selenium + Selenium WebDriver**: Herramienta que permite controlar un navegador web de forma programática, facilitando la interacción con la interfaz de usuario.
-- **WebDriver Manager**: Gestión automática de los drivers del navegador (ej. ChromeDriver).
-- **Git & GitHub**: Sistema de control de versiones y hosting del código fuente.
-- **Peticiones API**: Para realizar pruebas sobre las APIs del sistema y garantizar su correcto funcionamiento.
-- **Page Object Model (POM)**: Un patrón de diseño que facilita la organización y mantenimiento de las pruebas al abstraer la lógica de interacción con la interfaz de usuario.
-- **Sistema de Logging**: Para registrar eventos y errores durante la ejecución de las pruebas, lo que ayuda en la depuración y el seguimiento del flujo de ejecución.
-- **Faker**: Biblioteca para generar datos de prueba falsos, en este caso usuarios y contraseñas, lo que permite simular interacciones más realistas en las pruebas.
+- Python 3.x
+- Pytest
+- Selenium WebDriver
+- Git & GitHub
+- Faker
+- Logging
+- CSV / JSON
+- Request (API)
 
 
 ## Instalación de dependencias 🌟
-En consola:
-- **Pytest**: 
--       pip install pytest
+```bash
+pip install -r requirements.txt
+```
 
-- **Selenium**: 
--       pip install selenium
+## Reportes y logs 🌟
+El proyecto genera tres tipos principales de resultados durante la ejecución de las pruebas: **reporte HTML**, **capturas de pantalla**, **archivo de log**
 
-- **WebDriver**: 
--       pip install webdriver-manager
+### Reporte HTML
+Se genera un reporte HTML detallado con el nombre de ```reporte.hmtl``` en la **carpeta raiz** del proyecto
 
-- **Reporte HTML**: 
--       pip install pytest-html
+### Logs de ejecución
+Se genera un log con información detallada de toda la ejecución de las pruebas en la siguiente ubicación: ```logs/suite.log```
 
-- **Faker**: 
--       pip install faker
-
+### Capturas de pantalla
+Se realizan capturas de pantalla por cada test que haya fallado. Estas se encuentran en la siguiente ubicación: ```reports/screens```
 
 ## Ejecución de pruebas 🌟
-Para ejecutar las pruebas se debe abrir la consola, ubicarse sobre el proyecto a testear y con el comando:
--       py -m pytest run_tests.py -v
-
-(Ejecutando este archivo se correrán todos los tests del proyecto y se creará un reporte HTML.)
-
-
-En caso de querer ejecutar los tests individualmente se debe usar el siguiente comando (ejemplo con test_login):
--        py -m pytest test/test_login.py 
-- Si se quiere obtener más detalles de la ejecución, agregar al final del comando: -v
-- Si se quiere un reporte HTML, agregar al final del comando: --html=reporte.html
+Para iniciar la ejecución de las pruebas se debe ejecutar la siguiente línea:
+```bash
+python -m run_test.py -v
+```
 
 
 ## Interpretación de reportes generados 🌟
-- **Reporte HTML**: Los reportes generados son archivos HTML que contienen:
-    - Un resumen de las pruebas realizadas.
-    - Información sobre las pruebas que pasaron y fallaron.
-    - Detalles sobre los errores encontrados, incluyendo mensajes de error.
-Para poder visualizarlo, se debe abrir el archivo **report.html** en cualquier navegador para visualizar los resultados de las pruebas de manera clara y estructurada.
+Al ejecutar `run_test.py`, se genera un archivo HTML en la carpeta raiz, se registra información en el archivo de logs y se realizan capturas de pantalla en caso de que la prueba falle.
 
-- **Logging**: El sistema de logging está implementado para registrar información relevante durante la ejecución de las pruebas. Los logs se almacenan en la carpeta **logs** y pueden incluir:
+- **Reporte HTML**: este contiene:
+    - Lista completa de tests ejecutados.
+    - Estado de cada prueba.
+    - Duración de cada test.
+
+- **Capturas de pantalla** para pruebas fallidas
+
+- **Logging**: incluyen información sobre:
     - Mensajes de inicio y finalización de pruebas.
     - Errores encontrados durante la ejecución.
-    - Información sobre las interacciones con la interfaz de usuario y las APIs.
-Con este archivos se va a obtener información adicional sobre la ejecución de las pruebas y a facilitar la depuración en caso de fallos.
+    - Interacciones con la interfaz de usuario y las APIs.
 
+
+## Pruebas incluidas 🌟
+- Login exitoso y fallido
+- Login exitoso y fallido usando faker
+- Comportamiento de la página de inventario
+- Comportamiento de la página del carrito
+- API (JSONPlaceholder): GET users, POST create user, DELETE user, validaciones de cádigos HTTP, validaciones de estructura JSON.
+
+
+## Manejo de datos de prueba 🌟
+- En la carpeta `datos` se incluyen archivos como:
+    - `data_login.csv` -> datos de usuarios válidos o inválidos
+    - `productos.json` -> datos de productos para validación
+
+
+## Conclusión 🌟
+Este proyecto ofrece una estructura organizada y escalable para automatizar pruebas de API utilizando Python y Pytest. Incluye un flujo simple de ejecución mediante `run_test.py` y generación automática de reporte HTML facilitando el análisis de las pruebas.
+
+La arquitectura del proyecto está pensada para agregar nuevos casos de prueba y configuraciones sin modificar el núcleo del proyecto, manteniendo buenas prácticas y permitiendo su escalabilidad en el tiempo.

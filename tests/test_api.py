@@ -15,22 +15,24 @@ def test_get_user(id_usuario):
     assert response.status_code == 200, f"Error al obtener el usuario con id {id_usuario}"
 
     data = response.json()
+
+    print(data)
     
-    logger.info(f"ID del usuario obtenido: {data["data"]["id"]}")
-    assert data["data"]["id"] == id_usuario
+    logger.info(f"ID del usuario obtenido: {data["id"]}")
+    assert data["id"] == id_usuario
 
     logger.info("_______________________________________________________________________________")
 
 
 # Crear usuario
 @pytest.mark.parametrize("payload",[{
-        "name": "Jose",
-        "job": "Profesor"
+        "name": "Pepe",
+        "website": "zapateriapepe.com"
     }])
 def test_create_user(payload):
     api = APIPage()
 
-    logger.info(f"Realizando la solicitud POST a {api._URL_BASE} de un nuevo usuario: {payload["name"]} - {payload["job"]}")
+    logger.info(f"Realizando la solicitud POST a {api._URL_BASE} de un nuevo usuario: {payload["name"]} - {payload["website"]}")
     response = api.create_user(payload)
 
     logger.info(f"Status code: {response.status_code}")
@@ -45,7 +47,7 @@ def test_create_user(payload):
 
 
 # Eliminar usuario
-@pytest.mark.parametrize("id_usuario",["2"])
+@pytest.mark.parametrize("id_usuario",["1"])
 def test_delete_user(id_usuario):
     api = APIPage()
 
@@ -53,7 +55,13 @@ def test_delete_user(id_usuario):
     response = api.delete_user(id_usuario)
 
     logger.info(f"Status code: {response.status_code}")
-    assert response.status_code == 204, f"Error al eliminar al usuario con id {id_usuario}"
+    assert response.status_code == 200, f"Error al eliminar al usuario con id {id_usuario}"
+
+    data = response.json()
+
+    logger.info(f"Respuesta de la API: {data}")
+    # La API nos devuelve un json vacio
+    assert len(data) == 0
 
     logger.info("_______________________________________________________________________________")
 
@@ -62,13 +70,13 @@ def test_delete_user(id_usuario):
 '''
 # Encadenamiento de peticiones ------------------------------------------
 @pytest.mark.parametrize("payload",[{
-        "name": "Pepe",
-        "job": "Zapatero"
+        "name": "Maria",
+        "website": "floreriafresia.com"
     }])
 def test_crear_y_obtener_user(payload):
     api = APIPage()
 
-    logger.info(f"Realizando la solicitud POST a {api._URL_BASE} de un nuevo usuario: {payload["name"]} - {payload["job"]}")
+    logger.info(f"Realizando la solicitud POST a {api._URL_BASE} de un nuevo usuario: {payload["name"]} - {payload["website"]}")
     # Creamos el nuevo usuario
     response_crear_usuario = api.create_user(payload)
 
@@ -92,7 +100,7 @@ def test_crear_y_obtener_user(payload):
     usuario_obtenido = response_obtener_usuario.json()
     
     assert usuario_obtenido["name"] == payload["name"]
-    assert usuario_obtenido["job"] == payload["job"]
-    logger.info(f"Usuario obtenido: {payload["name"]} - {payload["job"]}")
+    assert usuario_obtenido["website"] == payload["website"]
+    logger.info(f"Usuario obtenido: {payload["name"]} - {payload["website"]}")
 
 '''
