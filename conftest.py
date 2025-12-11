@@ -15,6 +15,11 @@ def driver():
     options = Options()
     options.add_argument("--incognito")
 
+    options.add_argument("--no-sandbox") # github
+    options.add_argument("--disable-gpu") # github
+    options.add_argument("--window-size=1920,1080") # github
+    options.add_argument("--headless=new") # github
+
     driver = webdriver.Chrome(options=options)
     yield driver
     driver.quit()
@@ -38,13 +43,3 @@ def pytest_runtest_makereport(item,call):
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             file_name = target / f"{report.when}_{item.name}_{timestamp}.png"
             driver.save_screenshot(str(file_name))
-
-# ------------------------------ API ------------------------------
-
-# @pytest.fixture
-# def url_base():
-#     return "https://reqres.in/api/users"
-
-# @pytest.fixture
-# def header_request():
-#     return {"x-api-key": "reqres-free-v1"}

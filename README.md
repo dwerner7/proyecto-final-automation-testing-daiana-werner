@@ -1,7 +1,7 @@
 # Proyecto de Pruebas Automatizadas con Pytest y Selenium WebDriver 
 
 ## Propósito 🌟
-Este proyecto tiene como objetivo implementar pruebas automatizadas para la página web "https://www.saucedemo.com/" implementando **Page Object Model**, manejo de datos externos, generación de reportes HTML, logging y capturas automática de pantalla, y realizando pruebas en **API** sobre "https://jsonplaceholder.typicode.com/" utilizando **Requests**. 
+Este proyecto tiene como objetivo implementar pruebas automatizadas de UI para la página web "https://www.saucedemo.com/" implementando **Page Object Model**, manejo de datos externos, generación de reportes HTML, logging y capturas automática de pantalla, y pruebas automatizadas de **API** sobre "https://jsonplaceholder.typicode.com/" utilizando **Requests**. 
 
 
 ## Tecnologías Utilizadas 🌟

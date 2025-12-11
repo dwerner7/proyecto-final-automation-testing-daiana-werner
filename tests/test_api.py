@@ -65,10 +65,9 @@ def test_delete_user(id_usuario):
 
     logger.info("_______________________________________________________________________________")
 
-# Completo ---------------------------------------------------------------
+# ----------------------------- Encadenamiento de peticiones ------------------------------------------
+@pytest.mark.skip(reason="problemas de la api con el id")
 # Lo comento porque la API no encuentra al usuario que creé buscándolo con su id, trae a otro usuario por lo que los tests fallan
-'''
-# Encadenamiento de peticiones ------------------------------------------
 @pytest.mark.parametrize("payload",[{
         "name": "Maria",
         "website": "floreriafresia.com"
@@ -103,4 +102,3 @@ def test_crear_y_obtener_user(payload):
     assert usuario_obtenido["website"] == payload["website"]
     logger.info(f"Usuario obtenido: {payload["name"]} - {payload["website"]}")
 
-'''
