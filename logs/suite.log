@@ -1,0 +1,79 @@
+2025-12-10 21:22:00 INFO TalentoTech: Realizando la solicitud GET a https://jsonplaceholder.typicode.com/users del usuario con id 2
+2025-12-10 21:22:00 INFO TalentoTech: Status code: 200
+2025-12-10 21:22:00 INFO TalentoTech: ID del usuario obtenido: 2
+2025-12-10 21:22:00 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:00 INFO TalentoTech: Realizando la solicitud POST a https://jsonplaceholder.typicode.com/users de un nuevo usuario: Pepe - zapateriapepe.com
+2025-12-10 21:22:04 INFO TalentoTech: Status code: 201
+2025-12-10 21:22:04 INFO TalentoTech: Nombre del usuario creado: Pepe
+2025-12-10 21:22:04 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:04 INFO TalentoTech: Realizando la solicitud DELETE a https://jsonplaceholder.typicode.com/users del usuario con id 1
+2025-12-10 21:22:12 INFO TalentoTech: Status code: 200
+2025-12-10 21:22:12 INFO TalentoTech: Respuesta de la API: {}
+2025-12-10 21:22:12 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:20 INFO TalentoTech: Iniciando test de carrito...
+2025-12-10 21:22:24 INFO TalentoTech: Agregando 1 producto al carrito
+2025-12-10 21:22:24 INFO TalentoTech: Cantidad de productos en el carrito: 1
+2025-12-10 21:22:24 INFO TalentoTech: Test de carrito completo
+2025-12-10 21:22:24 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:28 INFO TalentoTech: Iniciando test de inventario con productos tomados de un json...
+2025-12-10 21:22:28 INFO TalentoTech: Producto: Sauce Labs Backpack
+2025-12-10 21:22:31 INFO TalentoTech: Agregando producto 'Sauce Labs Backpack' al carrito
+2025-12-10 21:22:34 INFO TalentoTech: Nombre del producto en el carrito: Sauce Labs Backpack
+2025-12-10 21:22:34 INFO TalentoTech: Test de carrito completo
+2025-12-10 21:22:34 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:38 INFO TalentoTech: Iniciando test de inventario con productos tomados de un json...
+2025-12-10 21:22:38 INFO TalentoTech: Producto: Sauce Labs Bike Light
+2025-12-10 21:22:41 INFO TalentoTech: Agregando producto 'Sauce Labs Bike Light' al carrito
+2025-12-10 21:22:43 INFO TalentoTech: Nombre del producto en el carrito: Sauce Labs Bike Light
+2025-12-10 21:22:43 INFO TalentoTech: Test de carrito completo
+2025-12-10 21:22:43 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:47 INFO TalentoTech: Iniciando test de inventario con productos tomados de un json...
+2025-12-10 21:22:47 INFO TalentoTech: Producto: Sauce Labs Bolt T-Shirt
+2025-12-10 21:22:51 INFO TalentoTech: Agregando producto 'Sauce Labs Bolt T-Shirt' al carrito
+2025-12-10 21:22:53 INFO TalentoTech: Nombre del producto en el carrito: Sauce Labs Bolt T-Shirt
+2025-12-10 21:22:53 INFO TalentoTech: Test de carrito completo
+2025-12-10 21:22:53 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:22:57 INFO TalentoTech: Iniciando test de inventario...
+2025-12-10 21:23:00 INFO TalentoTech: Cantidad de productos presentes en el inventario: 6
+2025-12-10 21:23:11 INFO TalentoTech: Cantidad de productos en el carrito: 0
+2025-12-10 21:23:21 INFO TalentoTech: 1 producto agregado al carrito
+2025-12-10 21:23:21 INFO TalentoTech: Cantidad actualizada de productos en el carrito: 1
+2025-12-10 21:23:21 INFO TalentoTech: Test de inventario completo
+2025-12-10 21:23:21 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:23:26 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-12-10 21:23:26 INFO TalentoTech: Completando con los datos de usuario: 'standard_user - secret_sauce'
+2025-12-10 21:23:29 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-12-10 21:23:29 INFO TalentoTech: Test de login de usuario standard_user exitoso
+2025-12-10 21:23:29 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:23:33 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-12-10 21:23:33 INFO TalentoTech: Completando con los datos de usuario: 'locked_out_user - secret_sauce'
+2025-12-10 21:23:37 INFO TalentoTech: Error en test de login - Epic sadface: Sorry, this user has been locked out.
+2025-12-10 21:23:37 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:23:41 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-12-10 21:23:41 INFO TalentoTech: Completando con los datos de usuario: 'problem_user - secret_sauce'
+2025-12-10 21:23:45 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-12-10 21:23:45 INFO TalentoTech: Test de login de usuario problem_user exitoso
+2025-12-10 21:23:45 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:23:50 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-12-10 21:23:50 INFO TalentoTech: Completando con los datos de usuario: 'performance_glitch_user - secret_sauce'
+2025-12-10 21:23:58 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-12-10 21:23:58 INFO TalentoTech: Test de login de usuario performance_glitch_user exitoso
+2025-12-10 21:23:58 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:24:02 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-12-10 21:24:02 INFO TalentoTech: Completando con los datos de usuario: 'error_user - secret_sauce'
+2025-12-10 21:24:05 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-12-10 21:24:05 INFO TalentoTech: Test de login de usuario error_user exitoso
+2025-12-10 21:24:05 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:24:09 INFO TalentoTech: Iniciando test de login con datos de inicio de sesion externos (csv)...
+2025-12-10 21:24:09 INFO TalentoTech: Completando con los datos de usuario: 'visual_user - secret_sauce'
+2025-12-10 21:24:13 INFO TalentoTech: Verificando redireccionamiento dentro de la pagina
+2025-12-10 21:24:13 INFO TalentoTech: Test de login de usuario visual_user exitoso
+2025-12-10 21:24:13 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:24:17 INFO TalentoTech: Iniciando test login con faker utilizando credenciales inválidas...
+2025-12-10 21:24:17 INFO TalentoTech: Completando con los datos de usuario: 'derrick07 - _#k9B82y'
+2025-12-10 21:24:20 INFO TalentoTech: Error en test de login - Epic sadface: Username and password do not match any user in this service
+2025-12-10 21:24:20 INFO TalentoTech: _______________________________________________________________________________
+2025-12-10 21:24:24 INFO TalentoTech: Iniciando test login con faker utilizando credenciales inválidas...
+2025-12-10 21:24:24 INFO TalentoTech: Completando con los datos de usuario: 'cjohnson - df@p2NerFt'
+2025-12-10 21:24:28 INFO TalentoTech: Error en test de login - Epic sadface: Username and password do not match any user in this service
+2025-12-10 21:24:28 INFO TalentoTech: _______________________________________________________________________________
