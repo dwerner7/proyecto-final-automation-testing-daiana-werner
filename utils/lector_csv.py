@@ -15,4 +15,3 @@ def leer_csv_login(ruta_archivo):
 
     return datos
 
-# el csv toma a True y False como string

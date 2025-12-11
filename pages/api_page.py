@@ -4,7 +4,6 @@ from utils.logger import logger
 
 class APIPage:
     _URL_BASE = "https://jsonplaceholder.typicode.com/users"
-    # _HEADER_REQUEST = {"x-api-key": "reqres-free-v1"}
 
     def get_user(self,user_id):
         response = requests.get(f"{self._URL_BASE}/{user_id}")
