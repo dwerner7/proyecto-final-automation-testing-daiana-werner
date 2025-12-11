@@ -39,13 +39,13 @@ jobs:
 
             # 6. Subir artefactos (reporte + imagenes + logs)
             - name: Subir HTML report
-              uses: actions/upload-artifacts@v4
+              uses: actions/upload-artifact@v4
               with:
                 name: html-report
                 path: reports/
 
             - name: Subir Suite logs
-              uses: actions/upload-artifacts@v4
+              uses: actions/upload-artifact@v4
               with:
                 name: suite-logs
                 path: logs/
